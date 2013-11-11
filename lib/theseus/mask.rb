@@ -1,5 +1,3 @@
-require 'chunky_png'
-
 module Theseus
   # A "mask" is, conceptually, a grid of true/false values that corresponds,
   # one-to-one, with the cells of a maze object. For every mask cell that is true,
@@ -80,7 +78,7 @@ module Theseus
         run = y * 2 + 1
         from = @height - y
         to = from + run - 1
-        Array.new(@width) do |x| 
+        Array.new(@width) do |x|
           (x >= from && x <= to) ? true : false
         end
       end
